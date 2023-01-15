@@ -18,6 +18,7 @@ app.get('/', (req, res) => {
 
 // Connect to MongoDB
 mongoose
+  .set('strictQuery', false)
   .connect(process.env.MONGODB_URI!)
   .then(() => {
     console.log('Connected to MongoDB Atlas.');
