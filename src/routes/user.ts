@@ -1,11 +1,11 @@
-const express = require("express");
-const userSchema = require("./../models/user");
+import { Router } from 'express';
+import userSchema from './../models/user';
 
-const router = express.Router();
+const router = Router();
 
-//Create user
-router.post("/users", (req, res) => {
-  const user = userSchema(req.body);
+// Create user
+router.post('/users', (req, res) => {
+  const user = new userSchema(req.body);
   user
     .save()
     .then((data) => {
@@ -16,8 +16,8 @@ router.post("/users", (req, res) => {
     });
 });
 
-//Get all users
-router.get("/users", (req, res) => {
+// Get all users
+router.get('/users', (req, res) => {
   userSchema
     .find()
     .then((data) => {
@@ -28,8 +28,8 @@ router.get("/users", (req, res) => {
     });
 });
 
-//Get specific user
-router.get("/users/:id", (req, res) => {
+// Get specific user
+router.get('/users/:id', (req, res) => {
   const { id } = req.params;
   userSchema
     .findById(id)
@@ -41,8 +41,8 @@ router.get("/users/:id", (req, res) => {
     });
 });
 
-//Update specific user
-router.put("/users/:id", (req, res) => {
+// Update specific user
+router.put('/users/:id', (req, res) => {
   const { id } = req.params;
   const { name, age, email } = req.body;
   userSchema
@@ -55,8 +55,8 @@ router.put("/users/:id", (req, res) => {
     });
 });
 
-//Delete specific user
-router.delete("/users/:id", (req, res) => {
+// Delete specific user
+router.delete('/users/:id', (req, res) => {
   const { id } = req.params;
   userSchema
     .remove({ _id: id })
@@ -68,4 +68,4 @@ router.delete("/users/:id", (req, res) => {
     });
 });
 
-module.exports = router;
+export default router;

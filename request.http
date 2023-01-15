@@ -23,3 +23,6 @@ Content-Type: application/json
     "age": "90",
     "email": "nikola@gmail.com"
 }
+
+###
+delete http://localhost:9000/api/users/63c2f35db99c4a05d8d016dd HTTP/1.1
