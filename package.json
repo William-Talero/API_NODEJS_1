@@ -10,7 +10,7 @@
     "build": "babel src --extensions \".ts,.js\" --out-dir build --copy-files"
   },
   "keywords": [],
-  "author": "",
+  "author": "William Andres Talero Cifuentes",
   "license": "ISC",
   "dependencies": {
     "dotenv": "^16.0.3",
