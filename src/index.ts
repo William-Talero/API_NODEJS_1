@@ -1,7 +1,7 @@
 import express from 'express';
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
-import userRoutes from '@routes/user';
+import userRoutes from './routes/user';
 
 const app = express();
 const port = process.env.API_PORT !== undefined ? process.env.API_PORT : 9000;
