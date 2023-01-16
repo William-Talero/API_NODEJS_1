@@ -1,8 +1,8 @@
 import express from 'express';
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
-import userRoutes from './routes/user';
-import apiTestRoutes from './routes/ApiTest';
+import userRoutes from './routes/userRoute';
+import apiTestRoutes from './routes/apiTestRoute';
 
 const app = express();
 const port = process.env.API_PORT !== undefined ? process.env.API_PORT : 9000;
