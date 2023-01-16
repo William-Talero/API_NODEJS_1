@@ -12,6 +12,10 @@ const apiTestSchema = new Schema({
   answerObtained: {
     type: String,
     required: true
+  },
+  createdAt:{
+    type: String,
+    required: true
   }
 });
 

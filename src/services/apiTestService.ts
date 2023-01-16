@@ -1,7 +1,11 @@
 import ApiTest from '../database/apiTest';
 
 const createApiTest = (data) => {
-  const newApiTest = ApiTest.createApiTest(data);
+  const dataWithDate = {
+    ...data,
+    createdAt: new Date().toLocaleString("en-US", {timeZone: "America/Bogota"})
+  }
+  const newApiTest = ApiTest.createApiTest(dataWithDate);
   return newApiTest;
 };
 const getAllApiTest = () => {

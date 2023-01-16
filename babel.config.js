@@ -18,7 +18,7 @@ module.exports = {
           '@modules': './src/modules',
           '@config': './src/config',
           '@shared': './src/shared',
-          '@routes/*': './src/routes/*'
+          '@routes': './src/routes'
         }
       }
     ]
