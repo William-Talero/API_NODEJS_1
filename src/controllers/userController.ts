@@ -10,6 +10,7 @@ const getAllUsers = async (req, res) => {
     res.send({ status: 200, response: allUsers });
 };
 
+
 const getSpecificUser = async(req, res) => {
   const { id } = req.params;
   const specificUser = await userService.getSpecificUser(id);
