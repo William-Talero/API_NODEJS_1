@@ -3,6 +3,7 @@ import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 import userRoutes from './routes/userRoute';
 import apiTestRoutes from './routes/apiTestRoute';
+import tokenRoutes from './routes/tokenRoute';
 
 const app = express();
 const port = process.env.API_PORT !== undefined ? process.env.API_PORT : 9000;
@@ -12,6 +13,7 @@ dotenv.config();
 app.use(express.json());
 app.use('/api', userRoutes);
 app.use('/api', apiTestRoutes);
+app.use('/api', tokenRoutes);
 
 // Routes
 app.get('/', (req, res) => {
