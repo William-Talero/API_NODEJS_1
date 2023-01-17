@@ -1,7 +1,7 @@
 import token from '../database/token';
 
-const getGeneratedToken = (payload) => {
-  const generatedToken = token.getGeneratedToken(payload);
+const getGeneratedToken = () => {
+  const generatedToken = token.getGeneratedToken();
   return generatedToken;
 };
 

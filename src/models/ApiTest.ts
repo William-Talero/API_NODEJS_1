@@ -13,7 +13,11 @@ const apiTestSchema = new Schema({
     type: String,
     required: true
   },
-  createdAt:{
+  flow: {
+    type: String,
+    required: true
+  },
+  createdAt: {
     type: String,
     required: true
   }

@@ -3,8 +3,8 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 
-const getGeneratedToken = (payload) => {
-  const token = jsonwebtoken.sign(payload, process.env.SECRET_KEY!, {
+const getGeneratedToken = () => {
+  const token = jsonwebtoken.sign({}, process.env.SECRET_KEY!, {
     expiresIn: 120
   });
   return token;

@@ -1,7 +1,7 @@
 import tokenService from '../services/tokenService';
 
 const getGeneratedToken = async (req, res) => {
-  const generatedToken = await tokenService.getGeneratedToken(req.body);
+  const generatedToken = await tokenService.getGeneratedToken();
   res.status(200).send({ status: 'OK', token: generatedToken });
 };
 
