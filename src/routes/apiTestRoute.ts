@@ -8,7 +8,7 @@ const router = Router();
 router.post('/apiTest', tokenController.verifiedToken, apiTestController.createApiTest);
 
 // Get all API test
-router.get('/apiTest', tokenController.verifiedToken, apiTestController.getAllApiTest);
+router.get('/apiTest', apiTestController.getAllApiTest);
 
 // Get specific API test
 router.get('/apiTest/:id', tokenController.verifiedToken, apiTestController.getSpecificApiTest);
