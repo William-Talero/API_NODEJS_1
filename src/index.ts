@@ -4,6 +4,7 @@ import dotenv from 'dotenv';
 import userRoutes from './routes/userRoute';
 import apiTestRoutes from './routes/apiTestRoute';
 import tokenRoutes from './routes/tokenRoute';
+import ChatGPTRoute from './routes/ChatGPTRoute';
 
 const app = express();
 const port = process.env.API_PORT !== undefined ? process.env.API_PORT : 9000;
@@ -14,6 +15,7 @@ app.use(express.json());
 app.use('/api', userRoutes);
 app.use('/api', apiTestRoutes);
 app.use('/api', tokenRoutes);
+app.use('/api', ChatGPTRoute);
 
 // Routes
 app.get('/', (req, res) => {
