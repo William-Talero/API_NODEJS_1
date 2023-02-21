@@ -7,13 +7,12 @@ const openai = new OpenAIApi(configuration);
 
 const sendPrompt = async (prompt) => {
   const response = await openai.createCompletion({
-    model: 'curie:ft-creasistemas-2023-02-13-23-51-12',
-    prompt: prompt,
+    model: "text-davinci-003",
+    prompt: `Esta es una lista de categorias:\nTarjeta de crédito, Tarjeta de debíto y creditos.\n\nEsta frase \"${prompt}\", a cual de las categorias anteriores pertenece:\nTarjeta de crédito.`,
     max_tokens: 100,
     temperature: 0,
     presence_penalty: 0,
     best_of: 1,
-    n: 1,
     stream: false,
     stop: ["human:", "AI:", "ai:", "AI :" ]
   });
